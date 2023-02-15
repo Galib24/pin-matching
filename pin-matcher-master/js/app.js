@@ -28,15 +28,24 @@ document.getElementById('generate-pin').addEventListener('click', function(){
 document.getElementById('calculator').addEventListener('click', function(event){
    const number = event.target.innerText;
    const typeNumberField = document.getElementById('type-number');
+   const previousTypedNumber = typeNumberField.value;
    if(isNaN(number)){
     // console.log(number);
     if(number === 'C'){
            typeNumberField.value = '';
     }
+    else if(number === '<'){
+        // console.log(previousTypedNumber);
+        const digits = previousTypedNumber.split('');
+        digits.pop();
+        const remainingDigits = digits.join('');
+        typeNumberField.value = remainingDigits;
+
+    }
    }
    else{
    
-    const previousTypedNumber = typeNumberField.value;
+    
     const newTypedNumber = previousTypedNumber + number;
     typeNumberField.value = newTypedNumber;
    }
