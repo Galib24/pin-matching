@@ -50,3 +50,19 @@ document.getElementById('calculator').addEventListener('click', function(event){
     typeNumberField.value = newTypedNumber;
    }
 })
+
+document.getElementById('verify-pin').addEventListener('click', function(){
+    // console.log('verify pin clicked')
+    const displayPinField = document.getElementById('display-pin');
+    const currentPin = displayPinField.value;
+
+    const typedNumberField = document.getElementById('type-number');
+    const typedNumber = typedNumberField.value;
+
+    if(typedNumber == currentPin){
+        console.log('correct pin');
+    }
+    else{
+        console.log('incorrect pin');
+    }
+})
