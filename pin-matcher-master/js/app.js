@@ -58,6 +58,8 @@ document.getElementById('verify-pin').addEventListener('click', function(){
 
     const typedNumberField = document.getElementById('type-number');
     const typedNumber = typedNumberField.value;
+    
+    
     const pinSuccessMessage = document.getElementById('pin-success');
     const pinFailureMessage = document.getElementById('pin-failure');
 
