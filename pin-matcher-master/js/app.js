@@ -58,11 +58,19 @@ document.getElementById('verify-pin').addEventListener('click', function(){
 
     const typedNumberField = document.getElementById('type-number');
     const typedNumber = typedNumberField.value;
+    const pinSuccessMessage = document.getElementById('pin-success');
+    const pinFailureMessage = document.getElementById('pin-failure');
 
     if(typedNumber == currentPin){
-        console.log('correct pin');
+        // console.log('correct pin');
+        
+        pinSuccessMessage.style.display = 'block';
+        pinFailureMessage.style.display = 'none';
     }
     else{
-        console.log('incorrect pin');
+        // console.log('incorrect pin');
+       
+        pinFailureMessage.style.display = 'block';
+        pinSuccessMessage.style.display = 'none';
     }
 })
